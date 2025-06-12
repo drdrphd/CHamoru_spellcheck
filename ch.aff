@@ -1,0 +1,1486 @@
+# NAME:      CHamoru (Guam) Orthographic Dictionary
+# LANGUAGE:  CHamoru (Guåhan)
+# CREATION:  [Date/Time]
+# CREATOR:   NSF DEL Project - Developing CHamoru Language Infrastructure
+# CONTRIBUTORS:
+#  * David Ruskin <ruskind@triton.uog.edu>
+#  * Sandy Chung (consultant)
+#  * Janice B. P. Toves
+#  * Jeremy Cepeda
+#  * Daniel Pangelinan
+#  * Roseann Q. Pajarillo <rcquenga@gdoe.net>
+#  * Marciana Aguon <mgaguon@gdoe.net>
+#  * Loretta Cruz <loretta.cruz@gdoe.net>
+#  * Nolan Flores
+#  * Jeniece Toves Hernandez
+#
+# Structure developed from Iloko (Philippines) Orthographic Dictionary by Joseph S. Maza <joseph.maza@gmail.com>
+
+
+
+#=======================================================================================================================
+# GENERAL OPTIONS  (Most taken directly from Maza's conventions)
+#=======================================================================================================================
+BREAK 0                  # Switch off default compounding?
+CIRCUMFIX        XX
+FLAG             long    # two-character affix identifiers
+FULLSTRIP
+KEEPCASE         ^^
+LANG             CH      # CHamoru (Guam orthography)
+NEEDAFFIX        ++
+SET              UTF-8   #character encoding -- UTF-8... however, does not allow curly quotes, which is an issue
+WORDCHARS        '’-     # This is not properly picking up glotta at the ends of words nor curly glotta
+
+# FORBIDDENWORD    !!
+# SUBSTANDARD      $$
+# IGNORE           `
+# COMPLEXPREFIXES          # twofold prefix stripping (but single suffix stripping?)  <-- weird writing direction?
+
+
+#=======================================================================================================================
+# SUGGESTION OPTIONS
+#=======================================================================================================================
+FORBIDWARN
+KEY              qwertyuiop|zxcvbnm|asdfghjkl|qaw|saz|wse|dsx|sz|edr|fdc|dx|rft|gfv|fc|tgy|hgb|gv|yhu|jhn|hb|uji|kjm|jn|iko|lkm
+NOSUGGEST        ~~
+TRY              anioteåsukgmlh'’drpbfcyñ-jvwzqANIOTEÅSUKGMLHDRPBFCYÑJVWZQ
+WARN             %%
+
+
+#=======================================================================================================================
+# AFFIX LISTING [Affix#] [type] [number of rule lines]: Definition)
+#=======================================================================================================================
+#  [A0] [PFX] [   93]: -in-         <in>_INFIX
+#  [A1] [PFX] [   30]: -um-         <um>_INFIX
+#  [A2] [PFX] [  235]: [various]    NOM                Initial Reduplication - Nominalizer (Only with people? kanta --> kakanta "singer")
+#  [A3] [PFX] [    3]: á-           RECIP              Reciprocal  
+#  [A4] [PFX] [    3]: chá-         SIMULT             Simultaneous
+#  [A5] [PFX] [    3]: achá-        SIMULT             Simultaneous
+#  [A6] [PFX] [    1]: chát-        'barely'           Without, barely, hardly, slightly, falsely
+#  [A7] [PFX] [    1]: fa'-         'turn_into'        To change X (into Y), transform X
+#  [A8] [PFX] [    2]: gá'-         AGT                Agentive
+#  [A9] [PFX] [    2]: há'-         HAB                Habitual
+#  [AA] [PFX] [    2]: ké-          PROSP              Prospective, try/about to do X
+#  [AB] [PFX] [    1]: na'-         CAUS               Causative
+#  [AC] [PFX] [    7]: man-         PL                 Plural
+#  [AD] [PFX] [    2]: ma-          PASS               Passive
+#  [AE] [PFX] [    2]: lá-          AUG                Augmentative
+#  [AF] [PFX] [    1]: pinat-       'more_of_N'          
+#  [AG] [PFX] [    1]: mina'-       ORD                Ordinal
+#  [AH] [SFX] [   64]: -i,-yi       APPL               Applicative (increasing number of grammatical arguments)
+#  [AI] [SFX] [    1]: -guan        'covertly'         Covertly, secretly, against someone's wishes, unintentionally
+#  [AJ] [SFX] [    4]: -ñaihon      DELIM              Delimitative, for a little bit, immediately
+#  [AK] [SFX] [    1]: -ña          AUG                Augmentative, more X (bigger, faster, etc.)
+#  [AL] [SFX] [    3]: -an,-guan    ATTRIB             Attributive, something having attributes of X, or something affected with X
+#  [AM] [SFX] [    1]: --hu         1S.POSS            First Person singular Possessive Pronoun, "my"
+#  [AN] [SFX] [    1]: --ku         1S.POSS            First Person singular Possessive Pronoun, "my"
+#  [AO] [SFX] [    1]: --mu         2S.POSS            Second Person singular Possessive Pronoun, "your"
+#  [AP] [SFX] [    1]: --ña         3S.POSS            Thrid Person singular Possessive Pronoun, "its, hers, his"
+#  [AQ] [SFX] [    1]: --ta         1PL.INCL.POSS      First Person plural inclusive Possessive Pronoun, "our (with you)"
+#  [AR] [SFX] [    1]: --måmi       1PL.EXCL.POSS      First Person plural Possessive Pronoun, "our (without you)"
+#  [AS] [SFX] [    1]: --miyu       2PL.POSS           Second Person plural Possessive Pronoun, "y'all's"
+#  [AT] [SFX] [    1]: --ñiha       3PL.POSS           Third Person plural Possessive Pronoun, "their"
+#  [AU] [PFX] [    9]: fan-         LOC  PREFIX PART OF CIRCUMFIX fan...an for places and times
+#  [AV] [SFX] [   21]: -an          LOC  SUFFIX PART OF CIRCUMFIX fan...an for places and times
+#  [AW] [PFX] [    1]: agón-        'repeat'           Like re- in English, to do again (not to do repeatedly)
+#  [AX] [PFX] [    1]: án-          'leftover'         Leftover bits and pieces (ánkanno' -- leftover foods, slops)
+#  [AY] [PFX] [    2]: é-           'search_for'       To search for X
+#  [AZ] [PFX] [    1]: gai-         POSS               Possessive
+#  [B0] [PFX] [    2]: gé'-         AUG.LAT            Augmentative lative, more/further in a given direction (e.g. Gé'haya = more east)
+#  [B1] [PFX] [    2]: hát-         AUG.LAT            Augmentative lative, more/further in a given direction (e.g. Háttichan = more west)
+#  [B2] [PFX] [    3]: ká-          POSS               Possessive
+#  [B3] [PFX] 
+#  [B4] [PFX] [    7]: man-         INDEF              Indefinite object marker
+#  [B5] [PFX] [    1]: mana'-       CAUS.PASS          Causative and Passive Voice
+#  [B6] [PFX] [    4]: manai-       EXIST.NEG.PL       Negative Plural Existential marker "there are not / there are none"
+#  [B7] [PFX] [    2]: mi-          HAVE_MANY_X        Have many of X
+#  [B8] [PFX] [    1]: muna'-       CAUS_EXIST         Existential Causative -- That which makes it or causes it to be 
+#  [B9] [PFX] [    1]: numa'-       CAUS_EXIST         Existential Causative -- That which makes it or causes it to be 
+#  [BA] [SFX] [    3]: -n           LNK                Linker (Topping, excrecent consonant)
+#  [BB] [SFX] [    2]: -on,-yon     ABIL               Abilitative or Aptative, capable of being X
+#  [BC] [PFX] [    2]: tai-         SIM                Similative, like X
+#  [BD] [PFX] [    2]: tái-         NEG.POSS           Negative Possessive -- to not have, be without
+#  [BE] [PFX] [   76]: tak-         COMP               Comparative (causes fronting)
+#  [BF] [PFX] [   76]: talak-       look.LAT           To look in the given direction  (**???)  (causes fronting)
+#  [BG] [PFX] [    7]: fan-         IMP                Imperative
+#  [BH] [SFX] [    4]: -iyi,-guiyi  B                  Benefactive
+#  [BI] [RDP] [    1]: [various]    INTENS             Final Reduplication - Intensifier *&*& (RDP is not approved category, but I'm using for morph analysis - see note)
+#  [BL] [PFX] [   78]: u->i,o->e    (Vowel Fronting)   Vowel Harmony, though phonological, necessary to account for to properly find words
+
+#  [BJ] [PFX] [   ??]: ya-         SUPL  PREFIX PART OF CIRCUMFIX yan...[REDUP] -- Superlative for places and times
+#  [BK] [SFX] [   ??]: [various]   SUPL  SUFFIX PART OF CIRCUMFIX yan...[REDUP] -- Superlative for places and times
+
+#***** add gef / gof -- intens  <-- GovGuam dictionary has these as separate words... should these be in our affixes??
+
+
+#*&*& -- Final reduplication is going to be huge.  Will need to consider all combinations of (presented below by frequency):
+# onset: k,m,b,s,p,t,d,f,g,l,h,n,ch,r,pr,y,tr,pl,br,gr,kr,fr,kl,ng,bl,gl,dr,sk,sl,fl
+# vowel: å,i,a,e,o,u,ai,ue,ao,ie,ui,ua,io,ia
+# final: n,',s,t,k,g,m,f,p,d,h,l,b,r
+# for 5880 combinations
+
+
+
+
+## Affix Ordering -- word roots can attach to Affix (a) and (b), but only affix (b) can go to affix (a)
+#
+# Ordering Rules from Topping:
+# (Vowel Fronting) ( Plural (  Infixation** / [Prefixes]** ( Reduplication ( Indef. Object Marking ( Suffixation* (ROOT))))))))
+# Suffixation = (((ROOT) Suffixes )  Construct State  )  Possessive Pronoun Clitics
+
+# ** Repeatable elements
+
+
+#=======================================================================================================================
+# AFFIX GROUPINGS - COUNT: 1  (For testing, keeping all together for now)
+#=======================================================================================================================
+# These rules say: Okay, assuming some root (or affixed root), what affixes might you find next to it?
+AF 12
+AF A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,AA,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,BA,BB,BC,BD,BE,BF,BK  #1 - Topping 1
+AF A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,AA,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,BA,BB,BC,BD,BE,BF,BK  #2 - Topping 2
+AF A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,AA,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,BA,BB,BC,BD,BE,BF,BK  #3 - Topping 3
+AF A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,AA,AB,AC,AD,AE,AF,AG,AH,AI,AJ,AK,AL,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV,AW,AX,AY,AZ,B0,B1,B2,B3,B4,B5,B6,B7,B8,B9,BA,BB,BC,BD,BE,BF,BK  #4 - Topping 4
+AF BL  #5 - from: Plural (PL)  to: (Vowel Fronting) (V.Har.) -- only at left edge -- internal Vowel Harmony is part of affixing rules
+AF A0,A1,A2  #6 - from: (V.Har)  to: Infixation, Reduplication   -- can occur on fronted words
+AF BL,AC,AU,A3,A4,A5,A6,A7,A8,A9,AA,AB,AD,AE,AF,AG,AW,AX,AY,AZ,B0,B1,B2,B3,B5,B6,B7,B8,B9,BC,BD,BE,BF,BG  #7 - from: Infixation  to: (V.Har.), PL, Prefixes  ##unused, since prefixing, infixing can loop (back to /05)
+AF BL,AC,AU,A3,A4,A5,A6,A7,A8,A9,AA,AB,AD,AE,AF,AG,AW,AX,AY,AZ,B0,B1,B2,B3,B5,B6,B7,B8,B9,BC,BD,BE,BF,BG,A0,A1  #8 - from: Nominal Reduplication (N.Redup)  to: (V.Har.), PL, Infix., Prefixes
+AF BL,AC,AU,A3,A4,A5,A6,A7,A8,A9,AA,AB,AD,AE,AF,AG,AW,AX,AY,AZ,B0,B1,B2,B3,B5,B6,B7,B8,B9,BC,BD,BE,BF,BG,A0,A1,A2  #9 - from: Indefinite Object Marking (INDEF)  to: (V.Har.), PL, Infix., Prefixes, N.Redup
+AF BL,AC,AU,A3,A4,A5,A6,A7,A8,A9,AA,AB,AD,AE,AF,AG,AW,AX,AY,AZ,B0,B1,B2,B3,B5,B6,B7,B8,B9,BC,BD,BE,BF,BG,A0,A1,A2,B4  #10 - from: Possessive Pronouns (POSS)  to (V.Har.), PL, Infix., Prefixes, N.Redup, INDEF
+AF BL,AC,AU,A3,A4,A5,A6,A7,A8,A9,AA,AB,AD,AE,AF,AG,AW,AX,AY,AZ,B0,B1,B2,B3,B5,B6,B7,B8,B9,BC,BD,BE,BF,BG,A0,A1,A2,B4,AM,AN,AO,AP,AQ,AR,AS,AT  #11 - from: Construct State (CS)  to: (V.Har.), PL, Infix., Prefixes, N.Redup, INDEF, POSS
+AF BL,AC,AU,A3,A4,A5,A6,A7,A8,A9,AA,AB,AD,AE,AF,AG,AW,AX,AY,AZ,B0,B1,B2,B3,B5,B6,B7,B8,B9,BC,BD,BE,BF,BG,A0,A1,A2,B4,AM,AN,AO,AP,AQ,AR,AS,AT,BA,BI  #12 - from: Suffixes  to: (V.Har.), PL, Infix., Prefixes, N.Redup, INDEF, POSS, CS, Final.Redup
+
+AF AH,AI,AJ,AK,AL,BB  #Suffixes <- Something for the roots?
+
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# INPUT CONVERSION
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Useful for replacing ligatures and accidental smart quotes in the input source
+ICONV 7
+ICONV ’ '
+ICONV ‘ '
+ICONV ﬃ ffi
+ICONV ﬄ ffl
+ICONV ﬀ ff
+ICONV ﬁ fi
+ICONV ﬂ fl
+
+# ICONV à a        # Remove accent mark      (?)Do we need to do this?
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# MAPPINGS
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# First line gives MAP [number of mappings]
+# After that are lines where MAP aå indicates these symbols are often confused  can be in parentheses, eg: (cc)(kk)
+MAP 2
+MAP aå
+MAP nñ
+
+
+#=======================================================================================================================
+# [A0] <IN> INFIX
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A0 Y 93
+PFX A0 0 in [^uo] <in>_INFIX
+PFX A0 b bin [^uo] <in>_INFIX
+PFX A0 d din [^uo] <in>_INFIX
+PFX A0 f fin [^uo] <in>_INFIX
+PFX A0 g gin [^uo] <in>_INFIX
+PFX A0 h hin [^uo] <in>_INFIX
+PFX A0 k kin [^uo] <in>_INFIX
+PFX A0 l lin [^uo] <in>_INFIX
+PFX A0 m min [^uo] <in>_INFIX
+PFX A0 n nin [^uo] <in>_INFIX
+PFX A0 p pin [^uo] <in>_INFIX
+PFX A0 r rin [^uo] <in>_INFIX
+PFX A0 s sin [^uo] <in>_INFIX
+PFX A0 t tin [^uo] <in>_INFIX
+PFX A0 y yin [^uo] <in>_INFIX
+PFX A0 o ine . <in>_INFIX
+PFX A0 u ini . <in>_INFIX
+PFX A0 bl blin [^uo] <in>_INFIX
+PFX A0 br brin [^uo] <in>_INFIX
+PFX A0 ch chin [^uo] <in>_INFIX
+PFX A0 dr drin [^uo] <in>_INFIX
+PFX A0 fr frin [^uo] <in>_INFIX
+PFX A0 gl glin [^uo] <in>_INFIX
+PFX A0 gr grin [^uo] <in>_INFIX
+PFX A0 kl klin [^uo] <in>_INFIX
+PFX A0 kr krin [^uo] <in>_INFIX
+PFX A0 ng ngin [^uo] <in>_INFIX
+PFX A0 pl plin [^uo] <in>_INFIX
+PFX A0 pr prin [^uo] <in>_INFIX
+PFX A0 sk skin [^uo] <in>_INFIX
+PFX A0 sl slin [^uo] <in>_INFIX
+PFX A0 tr trin [^uo] <in>_INFIX
+PFX A0 bo bine . <in>_INFIX
+PFX A0 bu bini . <in>_INFIX
+PFX A0 do dine . <in>_INFIX
+PFX A0 du dini . <in>_INFIX
+PFX A0 fo fine . <in>_INFIX
+PFX A0 fu fini . <in>_INFIX
+PFX A0 go gine . <in>_INFIX
+PFX A0 gu gini . <in>_INFIX
+PFX A0 ho hine . <in>_INFIX
+PFX A0 hu hini . <in>_INFIX
+PFX A0 ko kine . <in>_INFIX
+PFX A0 ku kini . <in>_INFIX
+PFX A0 lo line . <in>_INFIX
+PFX A0 lu lini . <in>_INFIX
+PFX A0 mo mine . <in>_INFIX
+PFX A0 mu mini . <in>_INFIX
+PFX A0 no nine . <in>_INFIX
+PFX A0 nu nini . <in>_INFIX
+PFX A0 po pine . <in>_INFIX
+PFX A0 pu pini . <in>_INFIX
+PFX A0 ro rine . <in>_INFIX
+PFX A0 ru rini . <in>_INFIX
+PFX A0 so sine . <in>_INFIX
+PFX A0 su sini . <in>_INFIX
+PFX A0 to tine . <in>_INFIX
+PFX A0 tu tini . <in>_INFIX
+PFX A0 yo yine . <in>_INFIX
+PFX A0 yu yini . <in>_INFIX
+PFX A0 blo bline . <in>_INFIX
+PFX A0 blu blini . <in>_INFIX
+PFX A0 bro brine . <in>_INFIX
+PFX A0 bru brini . <in>_INFIX
+PFX A0 cho chine . <in>_INFIX
+PFX A0 chu chini . <in>_INFIX
+PFX A0 dro drine . <in>_INFIX
+PFX A0 dru drini . <in>_INFIX
+PFX A0 fro frine . <in>_INFIX
+PFX A0 fru frini . <in>_INFIX
+PFX A0 glo gline . <in>_INFIX
+PFX A0 glu glini . <in>_INFIX
+PFX A0 gro grine . <in>_INFIX
+PFX A0 gru grini . <in>_INFIX
+PFX A0 gui guini . <in>_INFIX
+PFX A0 gua guina . <in>_INFIX
+PFX A0 gue guini . <in>_INFIX
+PFX A0 klo kline . <in>_INFIX
+PFX A0 klu klini . <in>_INFIX
+PFX A0 kro krine . <in>_INFIX
+PFX A0 kru krini . <in>_INFIX
+PFX A0 ngo ngine . <in>_INFIX
+PFX A0 ngu ngini . <in>_INFIX
+PFX A0 plo pline . <in>_INFIX
+PFX A0 plu plini . <in>_INFIX
+PFX A0 pro prine . <in>_INFIX
+PFX A0 pru prini . <in>_INFIX
+PFX A0 sko skine . <in>_INFIX
+PFX A0 sku skini . <in>_INFIX
+PFX A0 slo sline . <in>_INFIX
+PFX A0 slu slini . <in>_INFIX
+PFX A0 tro trine . <in>_INFIX
+PFX A0 tru trini . <in>_INFIX
+
+
+#=======================================================================================================================
+# [A1] <UM> INFIX
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A1 Y 30
+PFX A1 0 um . <um>_INFIX
+PFX A1 b bum . <um>_INFIX
+PFX A1 d dum . <um>_INFIX
+PFX A1 f fum . <um>_INFIX
+PFX A1 g gum . <um>_INFIX
+PFX A1 h hum . <um>_INFIX
+PFX A1 k kum . <um>_INFIX
+PFX A1 l lum . <um>_INFIX
+PFX A1 m mum . <um>_INFIX
+PFX A1 n num . <um>_INFIX
+PFX A1 p pum . <um>_INFIX
+PFX A1 r rum . <um>_INFIX
+PFX A1 s sum . <um>_INFIX
+PFX A1 t tum . <um>_INFIX
+PFX A1 y yum . <um>_INFIX
+PFX A1 bl blum . <um>_INFIX
+PFX A1 br brum . <um>_INFIX
+PFX A1 ch chum . <um>_INFIX
+PFX A1 dr drum . <um>_INFIX
+PFX A1 fr frum . <um>_INFIX
+PFX A1 gl glum . <um>_INFIX
+PFX A1 gr grum . <um>_INFIX
+PFX A1 kl klum . <um>_INFIX
+PFX A1 kr krum . <um>_INFIX
+PFX A1 ng ngum . <um>_INFIX
+PFX A1 pl plum . <um>_INFIX
+PFX A1 pr prum . <um>_INFIX
+PFX A1 sk skum . <um>_INFIX
+PFX A1 sl slum . <um>_INFIX
+PFX A1 tr trum . <um>_INFIX
+
+
+#=======================================================================================================================
+# [A2] INITIAL REDUPLICATION  --- NEEDS UPDATING --- only first vowel
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A2 Y 235
+PFX A2 a a'a . NOM
+PFX A2 e e'e . NOM
+PFX A2 i i'i . NOM
+PFX A2 o o'o . NOM
+PFX A2 u u'u . NOM
+PFX A2 bå båba . NOM
+PFX A2 ba baba . NOM
+PFX A2 bai baibai . NOM
+PFX A2 bao baobao . NOM
+PFX A2 be bebe . NOM
+PFX A2 bi bibi . NOM
+PFX A2 bie biebie . NOM
+PFX A2 bio biobio . NOM
+PFX A2 bo bobo . NOM
+PFX A2 boi boiboi . NOM
+PFX A2 bu bubu . NOM
+PFX A2 bue buebue . NOM
+PFX A2 blå blåbla . NOM
+PFX A2 ble bleble . NOM
+PFX A2 blu blublu . NOM
+PFX A2 brå bråbra . NOM
+PFX A2 brea breabrea . NOM
+PFX A2 bre brebre . NOM
+PFX A2 bri bribri . NOM
+PFX A2 broa broabroa . NOM
+PFX A2 bro brobro . NOM
+PFX A2 bru brubru . NOM
+PFX A2 cha chacha . NOM
+PFX A2 chå chåcha . NOM
+PFX A2 chao chaochao . NOM
+PFX A2 che cheche . NOM
+PFX A2 chi chichi . NOM
+PFX A2 cho chocho . NOM
+PFX A2 chu chuchu . NOM
+PFX A2 dai daidai . NOM
+PFX A2 da dada . NOM
+PFX A2 då dåda . NOM
+PFX A2 de dede . NOM
+PFX A2 dei deidei . NOM
+PFX A2 di didi . NOM
+PFX A2 dia diadia . NOM
+PFX A2 die diedie . NOM
+PFX A2 dio diodio . NOM
+PFX A2 do dodo . NOM
+PFX A2 du dudu . NOM
+PFX A2 due duedue . NOM
+PFX A2 drai draidrai . NOM
+PFX A2 dra dradra . NOM
+PFX A2 dre dredre . NOM
+PFX A2 fa fafa . NOM
+PFX A2 få fåfa . NOM
+PFX A2 fai faifai . NOM
+PFX A2 fe fefe . NOM
+PFX A2 fia fiafia . NOM
+PFX A2 fie fiefie . NOM
+PFX A2 fi fifi . NOM
+PFX A2 fo fofo . NOM
+PFX A2 fue fuefue . NOM
+PFX A2 fu fufu . NOM
+PFX A2 frå fråfra . NOM
+PFX A2 fra frafra . NOM
+PFX A2 fre frefre . NOM
+PFX A2 fri frifri . NOM
+PFX A2 fru frufru . NOM
+PFX A2 ga gaga . NOM
+PFX A2 gai gaigai . NOM
+PFX A2 gao gaogao . NOM
+PFX A2 gå gåga . NOM
+PFX A2 ge gege . NOM
+PFX A2 gi gigi . NOM
+PFX A2 gia giagia . NOM
+PFX A2 goia goiagoia . NOM
+PFX A2 go gogo . NOM
+PFX A2 gu gugu . NOM
+PFX A2 gua guagua . NOM
+PFX A2 gue guegue . NOM
+PFX A2 gui guigui . NOM
+PFX A2 glo gloglo . NOM
+PFX A2 grå grågra . NOM
+PFX A2 gri grigri . NOM
+PFX A2 gru grugru . NOM
+PFX A2 ha haha . NOM
+PFX A2 hå håha . NOM
+PFX A2 hai haihai . NOM
+PFX A2 hao haohao . NOM
+PFX A2 he hehe . NOM
+PFX A2 hi hihi . NOM
+PFX A2 hoe hoehoe . NOM
+PFX A2 hou houhou . NOM
+PFX A2 ho hoho . NOM
+PFX A2 hu huhu . NOM
+PFX A2 hue huehue . NOM
+PFX A2 hui huihui . NOM
+PFX A2 ka kaka . NOM
+PFX A2 kai kaikai . NOM
+PFX A2 kå kåka . NOM
+PFX A2 kao kaokao . NOM
+PFX A2 ke keke . NOM
+PFX A2 keu keukeu . NOM
+PFX A2 kie kiekie . NOM
+PFX A2 kio kiokio . NOM
+PFX A2 ki kiki . NOM
+PFX A2 ko koko . NOM
+PFX A2 ku kuku . NOM
+PFX A2 kue kuekue . NOM
+PFX A2 kui kuikui . NOM
+PFX A2 kuo kuokuo . NOM
+PFX A2 klå klåkla . NOM
+PFX A2 kla klakla . NOM
+PFX A2 kle klekle . NOM
+PFX A2 kli klikli . NOM
+PFX A2 kra krakra . NOM
+PFX A2 kre krekre . NOM
+PFX A2 kri krikri . NOM
+PFX A2 kru krukru . NOM
+PFX A2 krue kruekrue . NOM
+PFX A2 la lala . NOM
+PFX A2 lai lailai . NOM
+PFX A2 lao laolao . NOM
+PFX A2 lå låla . NOM
+PFX A2 le lele . NOM
+PFX A2 lia lialia . NOM
+PFX A2 li lili . NOM
+PFX A2 lie lielie . NOM
+PFX A2 lio liolio . NOM
+PFX A2 lo lolo . NOM
+PFX A2 lu lulu . NOM
+PFX A2 ma mama . NOM
+PFX A2 må måma . NOM
+PFX A2 mai maimai . NOM
+PFX A2 mao maomao . NOM
+PFX A2 mau maumau . NOM
+PFX A2 me meme . NOM
+PFX A2 mi mimi . NOM
+PFX A2 mie miemie . NOM
+PFX A2 mo momo . NOM
+PFX A2 mu mumu . NOM
+PFX A2 mue muemue . NOM
+PFX A2 na nana . NOM
+PFX A2 nå nåna . NOM
+PFX A2 nai nainai . NOM
+PFX A2 nao naonao . NOM
+PFX A2 ne nene . NOM
+PFX A2 ni nini . NOM
+PFX A2 nie nienie . NOM
+PFX A2 no nono . NOM
+PFX A2 nu nunu . NOM
+PFX A2 nue nuenue . NOM
+PFX A2 ngai ngaingai . NOM
+PFX A2 nga nganga . NOM
+PFX A2 ngå ngånga . NOM
+PFX A2 nge ngenge . NOM
+PFX A2 ngi ngingi . NOM
+PFX A2 ngo ngongo . NOM
+PFX A2 ngu ngungu . NOM
+PFX A2 pai paipai . NOM
+PFX A2 på påpa . NOM
+PFX A2 pao paopao . NOM
+PFX A2 pa papa . NOM
+PFX A2 pe pepe . NOM
+PFX A2 pi pipi . NOM
+PFX A2 pie piepie . NOM
+PFX A2 pio piopio . NOM
+PFX A2 po popo . NOM
+PFX A2 pue puepue . NOM
+PFX A2 pu pupu . NOM
+PFX A2 plai plaiplai . NOM
+PFX A2 plå plåpla . NOM
+PFX A2 pla plapla . NOM
+PFX A2 ple pleple . NOM
+PFX A2 plie plieplie . NOM
+PFX A2 pli plipli . NOM
+PFX A2 plo ploplo . NOM
+PFX A2 plu pluplu . NOM
+PFX A2 pra prapra . NOM
+PFX A2 pre prepre . NOM
+PFX A2 pri pripri . NOM
+PFX A2 proa proaproa . NOM
+PFX A2 pro propro . NOM
+PFX A2 prue prueprue . NOM
+PFX A2 prui pruiprui . NOM
+PFX A2 rai rairai . NOM
+PFX A2 ra rara . NOM
+PFX A2 re rere . NOM
+PFX A2 reu reureu . NOM
+PFX A2 ria riaria . NOM
+PFX A2 rie rierie . NOM
+PFX A2 riu riuriu . NOM
+PFX A2 ri riri . NOM
+PFX A2 ro roro . NOM
+PFX A2 rue ruerue . NOM
+PFX A2 rui ruirui . NOM
+PFX A2 ru ruru . NOM
+PFX A2 sa sasa . NOM
+PFX A2 så såsa . NOM
+PFX A2 sai saisai . NOM
+PFX A2 sao saosao . NOM
+PFX A2 se sese . NOM
+PFX A2 si sisi . NOM
+PFX A2 sie siesie . NOM
+PFX A2 sio siosio . NOM
+PFX A2 siu siusiu . NOM
+PFX A2 so soso . NOM
+PFX A2 su susu . NOM
+PFX A2 sue suesue . NOM
+PFX A2 sui suisui . NOM
+PFX A2 ske skeske . NOM
+PFX A2 skui skuiskui . NOM
+PFX A2 slai slaislai . NOM
+PFX A2 slu sluslu . NOM
+PFX A2 ta tata . NOM
+PFX A2 tå tåta . NOM
+PFX A2 tai taitai . NOM
+PFX A2 tao taotao . NOM
+PFX A2 te tete . NOM
+PFX A2 ti titi . NOM
+PFX A2 tie tietie . NOM
+PFX A2 tio tiotio . NOM
+PFX A2 to toto . NOM
+PFX A2 tu tutu . NOM
+PFX A2 trai traitrai . NOM
+PFX A2 trå tråtra . NOM
+PFX A2 tre tretre . NOM
+PFX A2 tria triatria . NOM
+PFX A2 trie trietrie . NOM
+PFX A2 tri tritri . NOM
+PFX A2 tro trotro . NOM
+PFX A2 tru trutru . NOM
+PFX A2 ya yaya . NOM
+PFX A2 yao yaoyao . NOM
+PFX A2 yeo yeoyeo . NOM
+PFX A2 ye yeye . NOM
+PFX A2 yi yiyi . NOM
+PFX A2 yo yoyo . NOM
+PFX A2 yu yuyu . NOM
+
+
+#=======================================================================================================================
+# [A3] PREFIX - RECIPROCAL  á-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A3 Y 3
+PFX A3 0 á [^áaeiou] RECIP
+PFX A3 0 á' [^á] RECIP
+PFX A3 1 á'a [á] RECIP
+
+
+#=======================================================================================================================
+# [A4] PREFIX - SIMULTANEOUS  chá-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A4 Y 3
+PFX A4 0 chá [^áaeiou] SIMULT
+PFX A4 0 chá' [^á] SIMULT
+PFX A4 1 chá'a [á] SIMULT
+
+
+#=======================================================================================================================
+# [A5] PREFIX - SIMULTANEOUS  achá-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A5 Y 3
+PFX A5 0 achá [^áaeiou] SIMULT
+PFX A5 0 achá' [^á] SIMULT
+PFX A5 1 achá'a [á] SIMULT
+
+
+#=======================================================================================================================
+# [A6] PREFIX - Barely,Slightly  chat-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: (hesitation, without, barely, hardly, slightly, (negative valence))
+#=======================================================================================================================
+PFX A6 Y 1
+PFX A6 0 chat . 'barely'
+
+
+#=======================================================================================================================
+# [A7] PREFIX - TANSMUTE  fa'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: To make into / fashion into / change X into Y -- triggers Vowel Fronting
+#=======================================================================================================================
+PFX A7 Y 76
+PFX A7 0 fa' . 'turn_into'		## will this over-generate? Need to force fronting... this might allow anything
+PFX A7 h fa'k [aei] 'turn_into'
+PFX A7 o fa'e [^aeiou] 'turn_into'
+PFX A7 u fa'i [^aeiou] 'turn_into'
+PFX A7 bå fa'ba [^aeiou] 'turn_into'
+PFX A7 bo fa'be [^aeiou] 'turn_into'
+PFX A7 bu fa'bi [^aeiou] 'turn_into'
+PFX A7 blå fa'bla [^aeiou] 'turn_into'
+PFX A7 blu fa'bli [^aeiou] 'turn_into'
+PFX A7 brå fa'bra [^aeiou] 'turn_into'
+PFX A7 bro fa'bre [^aeiou] 'turn_into'
+PFX A7 bru fa'bri [^aeiou] 'turn_into'
+PFX A7 chå fa'cha [^aeiou] 'turn_into'
+PFX A7 cho fa'che [^aeiou] 'turn_into'
+PFX A7 chu fa'chi [^aeiou] 'turn_into'
+PFX A7 då fa'da [^aeiou] 'turn_into'
+PFX A7 do fa'de [^aeiou] 'turn_into'
+PFX A7 du fa'di [^aeiou] 'turn_into'
+PFX A7 få fa'fa [^aeiou] 'turn_into'
+PFX A7 fo fa'fe [^aeiou] 'turn_into'
+PFX A7 fu fa'fi [^aeiou] 'turn_into'
+PFX A7 frå fa'fra [^aeiou] 'turn_into'
+PFX A7 fru fa'fri [^aeiou] 'turn_into'
+PFX A7 gå fa'ga [^aeiou] 'turn_into'
+PFX A7 go fa'ge [^aeiou] 'turn_into'
+PFX A7 gu fa'gi [^aeiou] 'turn_into'
+PFX A7 glo fa'gle [^aeiou] 'turn_into'
+PFX A7 grå fa'gra [^aeiou] 'turn_into'
+PFX A7 gru fa'gri [^aeiou] 'turn_into'
+PFX A7 hå fa'ka [^aeiou] 'turn_into'
+PFX A7 ho fa'ke [^aeiou] 'turn_into'
+PFX A7 hu fa'ki [^aeiou] 'turn_into'
+PFX A7 hai fa'kai . 'turn_into'
+PFX A7 hao fa'kao . 'turn_into'
+PFX A7 hoe fa'koe . 'turn_into'
+PFX A7 hou fa'kou . 'turn_into'
+PFX A7 hue fa'kue . 'turn_into'
+PFX A7 hui fa'kui . 'turn_into'
+PFX A7 kå fa'ka [^aeiou] 'turn_into'
+PFX A7 ko fa'ke [^aeiou] 'turn_into'
+PFX A7 ku fa'ki [^aeiou] 'turn_into'
+PFX A7 klå fa'kla [^aeiou] 'turn_into'
+PFX A7 kru fa'kri [^aeiou] 'turn_into'
+PFX A7 lå fa'la [^aeiou] 'turn_into'
+PFX A7 lo fa'le [^aeiou] 'turn_into'
+PFX A7 lu fa'li [^aeiou] 'turn_into'
+PFX A7 må fa'ma [^aeiou] 'turn_into'
+PFX A7 mo fa'me [^aeiou] 'turn_into'
+PFX A7 mu fa'mi [^aeiou] 'turn_into'
+PFX A7 nå fa'na [^aeiou] 'turn_into'
+PFX A7 no fa'ne [^aeiou] 'turn_into'
+PFX A7 nu fa'ni [^aeiou] 'turn_into'
+PFX A7 ngå fa'nga [^aeiou] 'turn_into'
+PFX A7 ngo fa'nge [^aeiou] 'turn_into'
+PFX A7 ngu fa'ngi [^aeiou] 'turn_into'
+PFX A7 på fa'pa [^aeiou] 'turn_into'
+PFX A7 po fa'pe [^aeiou] 'turn_into'
+PFX A7 pu fa'pi [^aeiou] 'turn_into'
+PFX A7 plå fa'pla [^aeiou] 'turn_into'
+PFX A7 plo fa'ple [^aeiou] 'turn_into'
+PFX A7 plu fa'pli [^aeiou] 'turn_into'
+PFX A7 pro fa'pre [^aeiou] 'turn_into'
+PFX A7 ro fa're [^aeiou] 'turn_into'
+PFX A7 ru fa'ri [^aeiou] 'turn_into'
+PFX A7 så fa'sa [^aeiou] 'turn_into'
+PFX A7 so fa'se [^aeiou] 'turn_into'
+PFX A7 su fa'si [^aeiou] 'turn_into'
+PFX A7 slu fa'sli [^aeiou] 'turn_into'
+PFX A7 tå fa'ta [^aeiou] 'turn_into'
+PFX A7 to fa'te [^aeiou] 'turn_into'
+PFX A7 tu fa'ti [^aeiou] 'turn_into'
+PFX A7 trå fa'tra [^aeiou] 'turn_into'
+PFX A7 tro fa'tre [^aeiou] 'turn_into'
+PFX A7 tru fa'tri [^aeiou] 'turn_into'
+PFX A7 yo fa'ye [^aeiou] 'turn_into'
+PFX A7 yu fa'yi [^aeiou] 'turn_into'
+
+
+#=======================================================================================================================
+# [A8] PREFIX - AGENTIVE  gá'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A8 Y 2
+PFX A8 0 gá' [^á] AGT
+PFX A8 1 gá'a [á] AGT
+
+
+#=======================================================================================================================
+# [A9] PREFIX - HABITUAL  há-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX A9 Y 2
+PFX A9 0 há' [^á] HAB
+PFX A9 1 há'a [á] HAB
+
+
+#=======================================================================================================================
+# [AA] PREFIX - PROSPECTIVE  ké-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AA Y 2
+PFX AA 0 ké [^é] PROSP
+PFX AA 1 ké'e [é] PROSP
+
+
+#=======================================================================================================================
+# [AB] PREFIX - CAUSATIVE  na'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AB Y 1
+PFX AB 0 na' . CAUS
+
+
+#=======================================================================================================================
+# [AC] PREFIX - PLURAL  man-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AC Y 7
+PFX AC 0 man . PL
+PFX AC 0 mang [g] PL
+PFX AC 1 mang [k] PL
+PFX AC 1 man [t] PL
+PFX AC 1 mañ [s] PL
+PFX AC 1 mam [pf] PL
+PFX AC ch mañ . PL
+
+
+#=======================================================================================================================
+# [AD] PREFIX - PASSIVE  ma-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AD Y 2
+PFX AD 0 ma [^aeiou] PASS
+PFX AD 1 ma' [aeiou] PASS
+
+
+#=======================================================================================================================
+# [AE] PREFIX - AUGMENTATIVE  lá-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AE Y 2
+PFX AE 0 lá [^á] AUG
+PFX AE 1 lá'a [á] AUG
+
+
+#=======================================================================================================================
+# [AF] PREFIX - MORE_OF_[N]  pinat-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AF Y 1
+PFX AF 0 pinat . 'more_of_N'
+
+
+#=======================================================================================================================
+# [AG] PREFIX - ORDINAL  mina'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: 
+#=======================================================================================================================
+PFX AG Y 1
+PFX AG 0 mina' . ORD
+
+
+#=======================================================================================================================
+# [AH] SUFFIX - APPLICATIVE  -i, -yi, -gue
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: (increases number of grammatical arguments)  -- stimulates regressive vowel harmony (raising)
+#=======================================================================================================================
+SFX AH Y 64
+SFX AH 0 i . APPL
+SFX AH a ayi . APPL
+SFX AH e iyi . APPL
+SFX AH o uyi . APPL
+SFX AH å' ayi . APPL
+SFX AH åf afi . APPL
+SFX AH åk aki . APPL
+SFX AH åm ami . APPL
+SFX AH ån ani . APPL
+SFX AH ång angi . APPL
+SFX AH åp api . APPL
+SFX AH ås asi . APPL
+SFX AH åt ati . APPL
+SFX AH e' iyi . APPL
+SFX AH ef ifi . APPL
+SFX AH ek iki . APPL
+SFX AH em imi . APPL
+SFX AH en ini . APPL
+SFX AH eng ingi . APPL
+SFX AH ep ipi . APPL
+SFX AH es isi . APPL
+SFX AH et iti . APPL
+SFX AH o' uyi . APPL
+SFX AH of ufi . APPL
+SFX AH ok uki . APPL
+SFX AH om umi . APPL
+SFX AH on uni . APPL
+SFX AH ong ungi . APPL
+SFX AH op upi . APPL
+SFX AH os usi . APPL
+SFX AH ot uti . APPL
+SFX AH å' å'i . APPL
+SFX AH a' a'i . APPL
+SFX AH e' i'i . APPL
+SFX AH i' i'i . APPL
+SFX AH o' u'i . APPL
+SFX AH u' u'i . APPL
+SFX AH ak ågue . APPL
+SFX AH åk ågue . APPL
+SFX AH ek ogue . APPL
+SFX AH ik ugue . APPL
+SFX AH ok ogue . APPL
+SFX AH uk ugue . APPL
+SFX AH ae ayi . APPL
+SFX AH ai ayi . APPL
+SFX AH ao ågue . APPL
+SFX AH au ågue . APPL
+SFX AH ea eayi . APPL
+SFX AH ei eiyi . APPL
+SFX AH ek ogue . APPL
+SFX AH eo ogue . APPL
+SFX AH eu ogue . APPL
+SFX AH ia iayi . APPL
+SFX AH ie iyi . APPL
+SFX AH io iogue . APPL
+SFX AH iu ugue . APPL
+SFX AH oa ogue . APPL
+SFX AH oe ogue . APPL
+SFX AH oi oiyi . APPL
+SFX AH ou ogue . APPL
+SFX AH ua uayi . APPL
+SFX AH ue uiyi . APPL
+SFX AH ui uiyi . APPL
+SFX AH uo uogue . APPL
+
+
+#=======================================================================================================================
+# [AI] SUFFIX - 'covertly',SECRETLY  -guan
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Do something covertly, secretly, against someone's wishes, unintentionally
+#=======================================================================================================================
+SFX AI Y 1
+SFX AI 0 guan . 'covertly'
+
+
+#=======================================================================================================================
+# [AJ] SUFFIX - DELIMITATIVE  -ñaihon
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: For a little bit, immediately
+#=======================================================================================================================
+SFX AJ Y 4
+SFX AJ 0 ñaihon [^aeiou] DELIM
+SFX AJ 0 nñaihon [aeiou] DELIM
+SFX AJ 0 -ñaihon [^aeiou] DELIM
+SFX AJ 0 n-ñaihon [aeiou] DELIM
+
+
+#=======================================================================================================================
+# [AK] SUFFIX - AUGMENTATIVE  -ña
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: More X (stronger, faster, smaller, etc.)
+#=======================================================================================================================
+SFX AK Y 1
+SFX AK 0 ña . AUG
+
+
+#=======================================================================================================================
+# [AL] SUFFIX - HAVING ATTRIBUTES OF X  -an
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Something having attributes of X, or something affected with X
+#=======================================================================================================================
+SFX AL Y 3
+SFX AL 0 an [^aeiou] ATTRIB
+SFX AL ao aguan . ATTRIB
+SFX AL 0 yan [aeiou] ATTRIB
+
+
+#=======================================================================================================================
+# [AM] CLITIC / SUFFIX - POSSESSIVE 1S  -hu
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: First Person singular Possessive Pronoun, "my"
+#=======================================================================================================================
+SFX AM Y 1
+SFX AM 0 -hu . 1S.POSS
+
+
+#=======================================================================================================================
+# [AN] CLITIC / SUFFIX - POSSESSIVE 1S  -ku
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: First Person singular Possessive Pronoun, "my"
+#=======================================================================================================================
+SFX AN Y 1
+SFX AN 0 -ku . 1S.POSS
+
+
+#=======================================================================================================================
+# [AO] CLITIC / SUFFIX - POSSESSIVE 2S  -mu
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Second Person singular Possessive Pronoun, "your"
+#=======================================================================================================================
+SFX AO Y 1
+SFX AO 0 -mu . 2S.POSS
+
+
+#=======================================================================================================================
+# [AP] CLITIC / SUFFIX - POSSESSIVE 3S  -ña
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Third Person singular Possessive Pronoun, "its, her, his"
+#=======================================================================================================================
+SFX AP Y 1
+SFX AP 0 -ña . 3S.POSS
+
+
+#=======================================================================================================================
+# [AQ] CLITIC / SUFFIX - POSSESSIVE 1PL.INCL  -ta
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: First Person Plural Inclusive Possessive Pronoun, "our (with you)"
+#=======================================================================================================================
+SFX AQ Y 1
+SFX AQ 0 -ta . 1PL.INCL.POSS
+
+
+#=======================================================================================================================
+# [AR] CLITIC / SUFFIX - POSSESSIVE 1PL.EXCL  -måmi
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: First Person Plural Inclusive Possessive Pronoun, "our (without you)"
+#=======================================================================================================================
+SFX AR Y 1
+SFX AR 0 -måmi . 1PL.EXCL.POSS
+
+
+#=======================================================================================================================
+# [AS] CLITIC / SUFFIX - POSSESSIVE 2PL  -miyu
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Second Person Plural Possessive Pronoun, "y'all's"
+#=======================================================================================================================
+SFX AS Y 1
+SFX AS 0 -miyu . 2PL.POSS
+
+
+#=======================================================================================================================
+# [AT] CLITIC / SUFFIX - POSSESSIVE 3PL  -ñiha
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Third Person Plural Possessive Pronoun, "their"
+#=======================================================================================================================
+SFX AT Y 1
+SFX AT 0 -ñiha . 3PL.POSS
+
+
+#=======================================================================================================================
+# [AU] CIRCUMFIX - LOCATIVE  fan- ... -an  (with 32)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Places and times take   fan...an,  ex: fanuchanan -- "the time of rain"
+#=======================================================================================================================
+PFX AU Y 9
+PFX AU 0 fan/32XX . LOC
+PFX AU 0 fam/32XX [b] LOC
+PFX AU 1 fam/32XX [fp] LOC
+PFX AU 1 fan/32XX [ht] LOC
+PFX AU 0 fang/32XX [g] LOC
+PFX AU 1 fang/32XX [k] LOC
+PFX AU ng fangng/32XX . LOC
+PFX AU 1 fañ/32XX [s] LOC
+PFX AU ch fañ/32XX . LOC
+
+
+SFX AV Y 21
+SFX AV 0 an/31XX [^aeiou] LOC
+SFX AV 0 yan/31XX [åaiu] LOC
+SFX AV ao aguan/31XX LOC
+SFX AV o' uyan/31XX . LOC
+SFX AV of ufan/31XX . LOC
+SFX AV ok ukan/31XX . LOC
+SFX AV om uman/31XX . LOC
+SFX AV on unan/31XX . LOC
+SFX AV ong ungan/31XX . LOC
+SFX AV op upan/31XX . LOC
+SFX AV os usan/31XX . LOC
+SFX AV ot utan/31XX . LOC
+SFX AV e' iyan/31XX . LOC
+SFX AV ef ifan/31XX . LOC
+SFX AV ek ikan/31XX . LOC
+SFX AV em iman/31XX . LOC
+SFX AV en inan/31XX . LOC
+SFX AV eng ingan/31XX . LOC
+SFX AV ep ipan/31XX . LOC
+SFX AV es isan/31XX . LOC
+SFX AV et itan/31XX . LOC
+
+
+#=======================================================================================================================
+# [AW] PREFIX - 'repeat'  agón-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: To do again (once).  Like re- in English
+#=======================================================================================================================
+PFX AW Y 1
+PFX AW 0 agón . 'repeat'
+
+
+#=======================================================================================================================
+# [AX] PREFIX - 'leftover' BITS OF X   án-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: leftover bits and pieces of X  (ánkanno' -- leftover foods, slops)
+#=======================================================================================================================
+PFX AX Y 1
+PFX AX 0 án . 'leftover'
+
+
+#=======================================================================================================================
+# [AY] PREFIX - SEARCH FOR X   é-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: to search for X
+#=======================================================================================================================
+PFX AY Y 2
+PFX AY 0 é [^éaeiou] 'search_for'
+PFX AY é é'e . 'search_for'
+
+
+#=======================================================================================================================
+# [AZ] PREFIX - POSSESSIVE  gai-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: to search for X
+#=======================================================================================================================
+PFX AZ Y 1
+PFX AZ 0 gai . POSS
+
+
+#=======================================================================================================================
+# [B0] PREFIX - AUGMENTATIVE LATIVE  gé'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: more/further in a given direction (e.g. Gé'haya -- more east)
+#=======================================================================================================================
+PFX B0 Y 2
+PFX B0 0 gé' . AUG.LAT
+PFX B0 gé gé'e . AUG.LAT
+
+
+#=======================================================================================================================
+# [B1] PREFIX - AUGMENTATIVE LATIVE  hát-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: more/further in a given direction (e.g. Gé'haya -- more east)
+#=======================================================================================================================
+PFX B1 Y 2
+PFX B1 0 hát . AUG.LAT
+PFX B1 h hátt . AUG.LAT
+
+
+#=======================================================================================================================
+# [B2] PREFIX - POSSESSIVE  ká-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: to search for X
+#=======================================================================================================================
+PFX B2 Y 3
+PFX B2 0 ká [^áaeiou] POSS
+PFX B2 0 ká [^á] POSS
+PFX B2 á ká'a . POSS
+
+
+#=======================================================================================================================
+# [B3] **REMOVE** PREFIX - BECOME X  mama'-    (combo of man- (indef) and fa')
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: **REMOVE** to change into or become X
+#=======================================================================================================================
+PFX B3 Y 0
+
+
+#=======================================================================================================================
+# [B4] PREFIX - INDEFINITE  man-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Indefinite object marker
+#=======================================================================================================================
+PFX B4 Y 7
+PFX B4 0 man . INDEF
+PFX B4 0 mang [g] INDEF
+PFX B4 1 mang [k] INDEF
+PFX B4 1 man [t] INDEF
+PFX B4 1 mañ [s] INDEF
+PFX B4 1 mam [fp] INDEF
+PFX B4 ch mañ . INDEF
+
+
+#=======================================================================================================================
+# [B5] PREFIX - CAUSATIVE and PASSIVE VOICE  mana'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Combination causative and passive voice marker for Topping class II verbs
+#=======================================================================================================================
+PFX B5 Y 1
+PFX B5 0 mana' . CAUS.PASS
+
+
+#=======================================================================================================================
+# [B6] PREFIX - NEGATIVE PLURAL EXISTENTIAL MARKER  manai-, mannai-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Negative Plural Existential marker  "there are no / there are none"
+#=======================================================================================================================
+PFX B6 Y 4
+PFX B6 0 manai [^aeiou] EXIST.NEG.PL
+PFX B6 0 mannai [^aeiou] EXIST.NEG.PL
+PFX B6 0 manai' [aeiou] EXIST.NEG.PL
+PFX B6 0 mannai' [aeiou] EXIST.NEG.PL
+
+
+#=======================================================================================================================
+# [B7] PREFIX - CAUSATIVE and PASSIVE VOICE  mana'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition: Combination causative and passive voice marker for Topping class II verbs
+#=======================================================================================================================
+PFX B7 Y 2
+PFX B7 0 mi [^aeiou] HAVE_MANY_X
+PFX B7 0 mi' [aeiou] HAVE_MANY_X
+
+
+#=======================================================================================================================
+# [B8] PREFIX - EXISTENTIAL CAUSATIVE  muna'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  That which makes it or causes it to be
+#=======================================================================================================================
+PFX B8 Y 1
+PFX B8 0 muna' . CAUS_EXIST
+
+
+#=======================================================================================================================
+# [B9] PREFIX - EXISTENTIAL CAUSATIVE  numa'-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  That which makes it or causes it to be
+#=======================================================================================================================
+PFX B9 Y 1
+PFX B9 0 numa' . CAUS_EXIST
+
+
+#=======================================================================================================================
+# [BA] SUFFIX - LINKER  -n
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  A marker on the possessed/modified word; Topping-- excrescent consonant
+#=======================================================================================================================
+SFX BA Y 3
+SFX BA 0 n/2 [aeiou] CS
+SFX BA i en/2 . CS
+SFX BA u on/2 . CS
+
+
+#=======================================================================================================================
+# [BB] SUFFIX - ABILITATIVE (APTATIVE)  -on, -yon
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Capable of being X
+#=======================================================================================================================
+SFX BB Y 2
+SFX BB 0 on [^aeiou] ABIL
+SFX BB 0 yon [aeiou] ABIL
+
+
+#=======================================================================================================================
+# [BC] PREFIX - SIMILATIVE  tai-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Similar to or like X
+#=======================================================================================================================
+PFX BC Y 2
+PFX BC 0 tai [^aeiou] SIM
+PFX BC 0 tai' [aeiou] SIM
+
+
+#=======================================================================================================================
+# [BD] PREFIX - NEGATIVE POSSESSIVE  tái-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  To not have, be without
+#=======================================================================================================================
+PFX BD Y 2
+PFX BD 0 tái [^aeiou] NEG.POSS
+PFX BD 0 tái' [aeiou] NEG.POSS
+
+
+#=======================================================================================================================
+# [BE] PREFIX - COMPARATIVE  tak-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Used for comparing location / direction words, triggers fronting
+#=======================================================================================================================
+PFX BE Y 76
+PFX BE 0 tak . COMP		## will this over-generate? Need to force fronting... this might allow anything
+PFX BE h takk [aei] COMP
+PFX BE o take [^aeiou] COMP
+PFX BE u taki [^aeiou] COMP
+PFX BE bå takba [^aeiou] COMP
+PFX BE bo takbe [^aeiou] COMP
+PFX BE bu takbi [^aeiou] COMP
+PFX BE blå takbla [^aeiou] COMP
+PFX BE blu takbli [^aeiou] COMP
+PFX BE brå takbra [^aeiou] COMP
+PFX BE bro takbre [^aeiou] COMP
+PFX BE bru takbri [^aeiou] COMP
+PFX BE chå takcha [^aeiou] COMP
+PFX BE cho takche [^aeiou] COMP
+PFX BE chu takchi [^aeiou] COMP
+PFX BE då takda [^aeiou] COMP
+PFX BE do takde [^aeiou] COMP
+PFX BE du takdi [^aeiou] COMP
+PFX BE få takfa [^aeiou] COMP
+PFX BE fo takfe [^aeiou] COMP
+PFX BE fu takfi [^aeiou] COMP
+PFX BE frå takfra [^aeiou] COMP
+PFX BE fru takfri [^aeiou] COMP
+PFX BE gå takga [^aeiou] COMP
+PFX BE go takge [^aeiou] COMP
+PFX BE gu takgi [^aeiou] COMP
+PFX BE glo takgle [^aeiou] COMP
+PFX BE grå takgra [^aeiou] COMP
+PFX BE gru takgri [^aeiou] COMP
+PFX BE hå takka [^aeiou] COMP
+PFX BE ho takke [^aeiou] COMP
+PFX BE hu takki [^aeiou] COMP
+PFX BE hai takkai . COMP
+PFX BE hao takkao . COMP
+PFX BE hoe takkoe . COMP
+PFX BE hou takkou . COMP
+PFX BE hue takkue . COMP
+PFX BE hui takkui . COMP
+PFX BE kå takka [^aeiou] COMP
+PFX BE ko takke [^aeiou] COMP
+PFX BE ku takki [^aeiou] COMP
+PFX BE klå takkla [^aeiou] COMP
+PFX BE kru takkri [^aeiou] COMP
+PFX BE lå takla [^aeiou] COMP
+PFX BE lo takle [^aeiou] COMP
+PFX BE lu takli [^aeiou] COMP
+PFX BE må takma [^aeiou] COMP
+PFX BE mo takme [^aeiou] COMP
+PFX BE mu takmi [^aeiou] COMP
+PFX BE nå takna [^aeiou] COMP
+PFX BE no takne [^aeiou] COMP
+PFX BE nu takni [^aeiou] COMP
+PFX BE ngå taknga [^aeiou] COMP
+PFX BE ngo taknge [^aeiou] COMP
+PFX BE ngu takngi [^aeiou] COMP
+PFX BE på takpa [^aeiou] COMP
+PFX BE po takpe [^aeiou] COMP
+PFX BE pu takpi [^aeiou] COMP
+PFX BE plå takpla [^aeiou] COMP
+PFX BE plo takple [^aeiou] COMP
+PFX BE plu takpli [^aeiou] COMP
+PFX BE pro takpre [^aeiou] COMP
+PFX BE ro takre [^aeiou] COMP
+PFX BE ru takri [^aeiou] COMP
+PFX BE så taksa [^aeiou] COMP
+PFX BE so takse [^aeiou] COMP
+PFX BE su taksi [^aeiou] COMP
+PFX BE slu taksli [^aeiou] COMP
+PFX BE tå takta [^aeiou] COMP
+PFX BE to takte [^aeiou] COMP
+PFX BE tu takti [^aeiou] COMP
+PFX BE trå taktra [^aeiou] COMP
+PFX BE tro taktre [^aeiou] COMP
+PFX BE tru taktri [^aeiou] COMP
+PFX BE yo takye [^aeiou] COMP
+PFX BE yu takyi [^aeiou] COMP
+
+
+#=======================================================================================================================
+# [BF] PREFIX - LOOK IN A GIVEN DIRECTION  talak-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Look in a given direction.  Adds to direction words, triggers fronting
+#=======================================================================================================================
+PFX BF Y 76
+PFX BF 0 talak . look.LAT		## will this over-generate? Need to force fronting... this might allow anything
+PFX BF h talakk [aei] look.LAT
+PFX BF o talake [^aeiou] look.LAT
+PFX BF u talaki [^aeiou] look.LAT
+PFX BF bå talakba [^aeiou] look.LAT
+PFX BF bo talakbe [^aeiou] look.LAT
+PFX BF bu talakbi [^aeiou] look.LAT
+PFX BF blå talakbla [^aeiou] look.LAT
+PFX BF blu talakbli [^aeiou] look.LAT
+PFX BF brå talakbra [^aeiou] look.LAT
+PFX BF bro talakbre [^aeiou] look.LAT
+PFX BF bru talakbri [^aeiou] look.LAT
+PFX BF chå talakcha [^aeiou] look.LAT
+PFX BF cho talakche [^aeiou] look.LAT
+PFX BF chu talakchi [^aeiou] look.LAT
+PFX BF då talakda [^aeiou] look.LAT
+PFX BF do talakde [^aeiou] look.LAT
+PFX BF du talakdi [^aeiou] look.LAT
+PFX BF få talakfa [^aeiou] look.LAT
+PFX BF fo talakfe [^aeiou] look.LAT
+PFX BF fu talakfi [^aeiou] look.LAT
+PFX BF frå talakfra [^aeiou] look.LAT
+PFX BF fru talakfri [^aeiou] look.LAT
+PFX BF gå talakga [^aeiou] look.LAT
+PFX BF go talakge [^aeiou] look.LAT
+PFX BF gu talakgi [^aeiou] look.LAT
+PFX BF glo talakgle [^aeiou] look.LAT
+PFX BF grå talakgra [^aeiou] look.LAT
+PFX BF gru talakgri [^aeiou] look.LAT
+PFX BF hå talakka [^aeiou] look.LAT
+PFX BF ho talakke [^aeiou] look.LAT
+PFX BF hu talakki [^aeiou] look.LAT
+PFX BF hai talakkai . look.LAT
+PFX BF hao talakkao . look.LAT
+PFX BF hoe talakkoe . look.LAT
+PFX BF hou talakkou . look.LAT
+PFX BF hue talakkue . look.LAT
+PFX BF hui talakkui . look.LAT
+PFX BF kå talakka [^aeiou] look.LAT
+PFX BF ko talakke [^aeiou] look.LAT
+PFX BF ku talakki [^aeiou] look.LAT
+PFX BF klå talakkla [^aeiou] look.LAT
+PFX BF kru talakkri [^aeiou] look.LAT
+PFX BF lå talakla [^aeiou] look.LAT
+PFX BF lo talakle [^aeiou] look.LAT
+PFX BF lu talakli [^aeiou] look.LAT
+PFX BF må talakma [^aeiou] look.LAT
+PFX BF mo talakme [^aeiou] look.LAT
+PFX BF mu talakmi [^aeiou] look.LAT
+PFX BF nå talakna [^aeiou] look.LAT
+PFX BF no talakne [^aeiou] look.LAT
+PFX BF nu talakni [^aeiou] look.LAT
+PFX BF ngå talaknga [^aeiou] look.LAT
+PFX BF ngo talaknge [^aeiou] look.LAT
+PFX BF ngu talakngi [^aeiou] look.LAT
+PFX BF på talakpa [^aeiou] look.LAT
+PFX BF po talakpe [^aeiou] look.LAT
+PFX BF pu talakpi [^aeiou] look.LAT
+PFX BF plå talakpla [^aeiou] look.LAT
+PFX BF plo talakple [^aeiou] look.LAT
+PFX BF plu talakpli [^aeiou] look.LAT
+PFX BF pro talakpre [^aeiou] look.LAT
+PFX BF ro talakre [^aeiou] look.LAT
+PFX BF ru talakri [^aeiou] look.LAT
+PFX BF så talaksa [^aeiou] look.LAT
+PFX BF so talakse [^aeiou] look.LAT
+PFX BF su talaksi [^aeiou] look.LAT
+PFX BF slu talaksli [^aeiou] look.LAT
+PFX BF tå talakta [^aeiou] look.LAT
+PFX BF to talakte [^aeiou] look.LAT
+PFX BF tu talakti [^aeiou] look.LAT
+PFX BF trå talaktra [^aeiou] look.LAT
+PFX BF tro talaktre [^aeiou] look.LAT
+PFX BF tru talaktri [^aeiou] look.LAT
+PFX BF yo talakye [^aeiou] look.LAT
+PFX BF yu talakyi [^aeiou] look.LAT
+
+
+#=======================================================================================================================
+# [BG] PREFIX - IMPERATIVE MOOD  fan-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Affix for commands, requiring something to be done
+#=======================================================================================================================
+PFX BG Y 7
+PFX BG 0 fan . IMP
+PFX BG 0 fang [g] IMP
+PFX BG 1 fang [k] IMP
+PFX BG 1 fan [t] IMP
+PFX BG 1 fañ [s] IMP
+PFX BG 1 fam [fp] IMP
+PFX BG ch fañ . IMP
+
+
+#=======================================================================================================================
+# [BH] Suffix - BENEFACTIVE  -iyi, -guiyi, -iguiyi
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  To do something for / for the benefit of someone else
+#=======================================================================================================================
+SFX BH Y 4
+SFX BH 0 iyi [^aeiou] B
+SFX BH 0 yiyi [aeiu] B
+SFX BH ao aguiyi . B
+SFX BH 1 iguiyi [o] B
+
+
+#=======================================================================================================================
+# [BI] REDUPLICATION - INTENSIFICATION (/AUGMENTATION?)  (Final Reduplication)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Word-final repetition causes intensification / augmentation / diminution of the thing/quality
+#=======================================================================================================================
+# RDP BI Y 1
+# RDP BI . /09 . INTENS   (Custom algorithm in morphological breakdown... for spellcheck will need the following--)
+
+#*&*& -- Final reduplication is going to be huge.  Will need to consider all combinations of (presented below by frequency):
+# onset: k,m,b,s,p,t,d,f,g,l,h,n,ch,r,pr,y,tr,pl,br,gr,kr,fr,kl,ng,bl,gl,dr,sk,sl,fl
+# vowel: å,i,a,e,o,u,ai,ue,ao,ie,ui,ua,io,ia
+# final: n,',s,t,k,g,m,f,p,d,h,l,b,r
+# for 5880 combinations
+# (or more if prior vowels are needed to figure out wyllable boundaries)
+
+
+#=======================================================================================================================
+# [BL] Initial Phonological Process - VOWEL FRONTING
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Definition:  Vowel Harmony rules needed to find appropriate roots
+#=======================================================================================================================
+PFX BL Y 78
+PFX BL o e [^aeiou] (Vowel Fronting)
+PFX BL u i [^aeiou] (Vowel Fronting)
+PFX BL bå ba [^aeiou] (Vowel Fronting)
+PFX BL bo be [^aeiou] (Vowel Fronting)
+PFX BL bu bi [^aeiou] (Vowel Fronting)
+PFX BL blå bla [^aeiou] (Vowel Fronting)
+PFX BL blo ble [^aeiou] (Vowel Fronting)
+PFX BL blu bli [^aeiou] (Vowel Fronting)
+PFX BL brå bra [^aeiou] (Vowel Fronting)
+PFX BL bro bre [^aeiou] (Vowel Fronting)
+PFX BL bru bri [^aeiou] (Vowel Fronting)
+PFX BL chå cha [^aeiou] (Vowel Fronting)
+PFX BL cho che [^aeiou] (Vowel Fronting)
+PFX BL chu chi [^aeiou] (Vowel Fronting)
+PFX BL då da [^aeiou] (Vowel Fronting)
+PFX BL do de [^aeiou] (Vowel Fronting)
+PFX BL du di [^aeiou] (Vowel Fronting)
+PFX BL få fa [^aeiou] (Vowel Fronting)
+PFX BL fo fe [^aeiou] (Vowel Fronting)
+PFX BL fu fi [^aeiou] (Vowel Fronting)
+PFX BL flå fla [^aeiou] (Vowel Fronting)
+PFX BL flo fle [^aeiou] (Vowel Fronting)
+PFX BL flu fli [^aeiou] (Vowel Fronting)
+PFX BL frå fra [^aeiou] (Vowel Fronting)
+PFX BL fro fre [^aeiou] (Vowel Fronting)
+PFX BL fru fri [^aeiou] (Vowel Fronting)
+PFX BL gå ga [^aeiou] (Vowel Fronting)
+PFX BL go ge [^aeiou] (Vowel Fronting)
+PFX BL gu gi [^aeiou] (Vowel Fronting)
+PFX BL glo gle [^aeiou] (Vowel Fronting)
+PFX BL grå gra [^aeiou] (Vowel Fronting)
+PFX BL gru gri [^aeiou] (Vowel Fronting)
+PFX BL hå ha [^aeiou] (Vowel Fronting)
+PFX BL ho he [^aeiou] (Vowel Fronting)
+PFX BL hu hi [^aeiou] (Vowel Fronting)
+PFX BL kå ka [^aeiou] (Vowel Fronting)
+PFX BL ko ke [^aeiou] (Vowel Fronting)
+PFX BL ku ki [^aeiou] (Vowel Fronting)
+PFX BL klå kla [^aeiou] (Vowel Fronting)
+PFX BL klo kle [^aeiou] (Vowel Fronting)
+PFX BL kru kri [^aeiou] (Vowel Fronting)
+PFX BL lå la [^aeiou] (Vowel Fronting)
+PFX BL lo le [^aeiou] (Vowel Fronting)
+PFX BL lu li [^aeiou] (Vowel Fronting)
+PFX BL må ma [^aeiou] (Vowel Fronting)
+PFX BL mo me [^aeiou] (Vowel Fronting)
+PFX BL mu mi [^aeiou] (Vowel Fronting)
+PFX BL nå na [^aeiou] (Vowel Fronting)
+PFX BL no ne [^aeiou] (Vowel Fronting)
+PFX BL nu ni [^aeiou] (Vowel Fronting)
+PFX BL ngå nga [^aeiou] (Vowel Fronting)
+PFX BL ngo nge [^aeiou] (Vowel Fronting)
+PFX BL ngu ngi [^aeiou] (Vowel Fronting)
+PFX BL på pa [^aeiou] (Vowel Fronting)
+PFX BL po pe [^aeiou] (Vowel Fronting)
+PFX BL pu pi [^aeiou] (Vowel Fronting)
+PFX BL plå pla [^aeiou] (Vowel Fronting)
+PFX BL plo ple [^aeiou] (Vowel Fronting)
+PFX BL plu pli [^aeiou] (Vowel Fronting)
+PFX BL pro pre [^aeiou] (Vowel Fronting)
+PFX BL pru pri [^aeiou] (Vowel Fronting)
+PFX BL rå ra [^aeiou] (Vowel Fronting)
+PFX BL ro re [^aeiou] (Vowel Fronting)
+PFX BL ru ri [^aeiou] (Vowel Fronting)
+PFX BL så sa [^aeiou] (Vowel Fronting)
+PFX BL so se [^aeiou] (Vowel Fronting)
+PFX BL su si [^aeiou] (Vowel Fronting)
+PFX BL slå sla [^aeiou] (Vowel Fronting)
+PFX BL slo sle [^aeiou] (Vowel Fronting)
+PFX BL slu sli [^aeiou] (Vowel Fronting)
+PFX BL tå ta [^aeiou] (Vowel Fronting)
+PFX BL to te [^aeiou] (Vowel Fronting)
+PFX BL tu ti [^aeiou] (Vowel Fronting)
+PFX BL trå tra [^aeiou] (Vowel Fronting)
+PFX BL tro tre [^aeiou] (Vowel Fronting)
+PFX BL tru tri [^aeiou] (Vowel Fronting)
+PFX BL yo ye [^aeiou] (Vowel Fronting)
+PFX BL yu yi [^aeiou] (Vowel Fronting)
+
+
+
